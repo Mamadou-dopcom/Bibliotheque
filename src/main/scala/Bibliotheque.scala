@@ -2,11 +2,11 @@
 import scala.io._
 import java.io._
 
-// Crée la calsse Bibliothèque
+// Crée la calss Bibliothèque
 class Bibliotheque {
   var livres: Vector[Livre] = Vector()
 
-  //Les méthodes
+  //Les différentes méthodes pour interagir avec l'utilisateur.
   def ajouterLivre(livre: Livre): Unit = {
     if (livre.titre.isEmpty || livre.auteur.isEmpty || livre.anneeDePublication <= 0) {
       throw new IllegalArgumentException("Les détails du livre sont invalides.")
@@ -15,7 +15,7 @@ class Bibliotheque {
     println(s"Le livre '${livre.titre}' écrit par ${livre.auteur} a été ajouté à la bibliothèque avec succès.")
   }
 
-//La méthode ajouterDatilLivre avec la gestion des erreurs
+//La méthode ajouterDetailLivre avec la gestion des erreurs
   def ajouterDetailLivre(): Livre = {
     println("Veuillez entrer les détails du livre (titre, auteur, année de publication):")
     val titre = StdIn.readLine()
