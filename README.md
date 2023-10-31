@@ -29,6 +29,21 @@ Peut ajouter un livre à la bibliothèque en fournissant les détails du livre
 Peut emprunter et rendre des livres en fournissant le titre du livre ou le nom
 de l'auteur.
 Peut également rechercher des livres par titre ou par auteur.
+
+# **Fonctionnalités Avancées**
+
+- Gestion des Erreurs : L'application gère les erreurs telles que la tentative d'emprunter un livre déjà emprunté ou la tentative de rendre un livre qui n'est pas dans la bibliothèque.
+- Sauvegarde de l'État : Possibilité de sauvegarder et charger l'état actuel de la bibliothèque depuis un fichier.
+- Recherche de Livres : Les utilisateurs peuvent rechercher des livres par titre ou par auteur.
+
+### **Structure du Code**
+
+Le code est organisé en plusieurs fichiers Scala pour maintenir une structure propre et bien organisée. Chaque fichier contient des parties distinctes de la logique de l'application.
+
+### **Tests Unitaires**
+
+Des tests unitaires peuvent être ajoutés pour s'assurer du bon fonctionnement de l'application.
+
 # Scénario : Gestion d'une bibliothèque
 1. L'utilisateur démarre l'application.
 2. L'application crée une instance de la classe Bibliotheque appelée bibliotheque .
