@@ -4,7 +4,7 @@ object Main extends App {
 
   val bibliotheque = new Bibliotheque()
 
-  // On va charger la bibliothèque
+  // Charger l'état depuis le fichier (au démarrage)
   bibliotheque.chargerDepuisFichier("bibliotheque.txt")
 
   while (true) {
