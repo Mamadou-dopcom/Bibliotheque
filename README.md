@@ -38,11 +38,11 @@ Peut également rechercher des livres par titre ou par auteur.
 
 ### **Structure du Code**
 
-Le code est organisé en plusieurs fichiers Scala pour maintenir une structure propre et bien organisée. Chaque fichier contient des parties distinctes de la logique de l'application.
+Le code est organisé en plusieurs fichiers Scala pour maintenir une structure propre et bien organisée.
 
 ### **Tests Unitaires**
 
-Des tests unitaires peuvent être ajoutés pour s'assurer du bon fonctionnement de l'application.
+Des tests unitaires Sont  ajoutés pour s'assurer du bon fonctionnement de l'application.
 
 # Scénario : Gestion d'une bibliothèque
 1. L'utilisateur démarre l'application.
