@@ -2,10 +2,11 @@
 import scala.io._
 import java.io._
 
-
+// Crée la calsse Bibliothèque
 class Bibliotheque {
   var livres: Vector[Livre] = Vector()
 
+  //Les méthodes
   def ajouterLivre(livre: Livre): Unit = {
     if (livre.titre.isEmpty || livre.auteur.isEmpty || livre.anneeDePublication <= 0) {
       throw new IllegalArgumentException("Les détails du livre sont invalides.")
@@ -14,7 +15,7 @@ class Bibliotheque {
     println(s"Le livre '${livre.titre}' écrit par ${livre.auteur} a été ajouté à la bibliothèque avec succès.")
   }
 
-
+//La méthode ajouterDatilLivre avec la gestion des erreurs
   def ajouterDetailLivre(): Livre = {
     println("Veuillez entrer les détails du livre (titre, auteur, année de publication):")
     val titre = StdIn.readLine()
@@ -33,7 +34,7 @@ class Bibliotheque {
     livre
   }
 
-
+//la méthode emprunterLivre
   def emprunterLivre(titreLivre: String): Unit = {
     val livreOption = livres.find(_.titre.toLowerCase == titreLivre.toLowerCase) //Nous permet de verifier si le titre correspond a un des titre des livres qu'on a
 
@@ -63,9 +64,10 @@ class Bibliotheque {
   }
 
 
-  //On a une methode qui permet de rechercher un Livre
-  //Cette methode offre deux choix possible qui sont la recherche par titre ou par Auteur
-  //Donc elle appelle une autre fonction pour specifier le critere de recherche
+  /*On a une methode qui permet de rechercher un Livre
+  Cette methode offre deux choix possible qui sont la recherche par titre ou par Auteur
+  Donc elle appelle une autre fonction pour specifier le critere de recherche*/
+
   def rechercherLivre(): Unit = {
     println("Choisissez le critère de recherche en entrant le numero correspondant  :")
     println("1: Titre")
@@ -104,7 +106,7 @@ class Bibliotheque {
     }
   }
 
-
+//Affichage de la resultat de recherche
   private def afficherResultatRecherche(livresTrouves: Vector[Livre]): Unit = {
     println("Résultats de la recherche :")
     if (livresTrouves.nonEmpty) {
